@@ -12,7 +12,7 @@ class CuestionarioEvaluacionResource extends JsonResource
             'id' => $this->id,
             'titulo' => $this->titulo,
             'autor' => $this->autor,
-            'preguntas' => PreguntaResource::collection($this->whenLoaded('preguntas'))
+            'preguntas' => PreguntaResource::collection($this->whenLoaded('preguntas')),
         ];
     }
 }

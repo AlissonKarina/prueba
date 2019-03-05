@@ -13,8 +13,8 @@ class CuestionarioEvaluacionController extends Controller
         return CuestionarioEvaluacionResource::collection(CuestionarioEvaluacion::with('preguntas')->paginate(25));
     }
 
-    public function show($id) {
+    /* public function show($id) {
         $cuestionario = CuestionarioEvaluacion::with('preguntas')->where('id', $id)->get();
         return CuestionarioEvaluacionResource::collection($cuestionario);
-    }
+    } */
 }

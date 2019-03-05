@@ -11,6 +11,10 @@
 |
 */
 
+$router->get('/cuestionario-evalu/{id}/preguntas', 'PreguntaController@index');
+$router->get('/citas', 'CitaController@index');
+$router->get('/unayoe-perfiles', 'UnayoePerfilController@index');
+
 $router->group(['prefix'=>'api/v1'], function() use($router){
 
     //AUTH
@@ -38,7 +42,7 @@ $router->group(['prefix'=>'api/v1'], function() use($router){
 
         //CUESTIONARIO EVALUACION
         $router->get('/cuestionario-evaluaciones', 'CuestionarioEvaluacionController@index');
-        $router->get('/cuestionario-evaluacion/{id}', 'CuestionarioEvaluacionController@show');
+        /* $router->get('/cuestionario-evaluacion/{id}', 'CuestionarioEvaluacionController@show'); */
 
         //CITAS
         $router->get('/citas', 'CitaController@index');
